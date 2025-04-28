@@ -1,11 +1,11 @@
 import 'dart:ui';
-import 'package:eat_list/profile_screen.dart';
+import 'package:eat_list/Calendar.dart';
+import 'package:eat_list/ProfileScreen.dart';
+import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
-import 'calendar_screen.dart';
 import 'category1.dart';
 import 'category2.dart';
 import 'category3.dart';
-import 'home_screen.dart';
 //import 'home_screen.dart';
 //import 'calendar_screen.dart';
 //import 'profile_screen.dart';
@@ -84,13 +84,13 @@ class SubCategoriesScreen extends StatelessWidget {
                 IconButton(
                   icon: Icon(Icons.home, color: Colors.white, size: screenWidth * 0.08),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => CookingMenuPage()));
                   },
                 ),
                 IconButton(
                   icon: Icon(Icons.calendar_today, color: Colors.white, size: screenWidth * 0.08),
                   onPressed: () {
-                   Navigator.push(context, MaterialPageRoute(builder: (context) => CalendarScreen()));
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => CalendarPage()));
                   },
                 ),
                 IconButton(
@@ -102,7 +102,7 @@ class SubCategoriesScreen extends StatelessWidget {
                 IconButton(
                   icon: Icon(Icons.person, color: Colors.white, size: screenWidth * 0.08),
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Profilescreen()));
                   },
                 ),
               ],

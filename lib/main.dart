@@ -1,12 +1,15 @@
-import 'package:eat_list/category1.dart';
-import 'package:eat_list/review.dart';
+import 'package:eat_list/desc.dart';
+import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:eat_list/Calendar.dart';
+import 'package:eat_list/category1.dart';
+import 'package:eat_list/review.dart';
 import 'opening1.dart';
 import 'opening2.dart';
 import 'opening3.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
   await Hive.openBox('reviewsBox');
@@ -20,7 +23,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Review(),
+      initialRoute: '/', // Set initial route
+      routes: {
+        '/': (context) => DishDetailsPage(),
+        '/review': (context) => Review(),
+        '/calendar': (context) => CalendarPage()
+      },
     );
   }
 }

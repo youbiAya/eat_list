@@ -2,9 +2,7 @@ import 'dart:ui';
 import 'package:eat_list/category1.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'home_screen.dart';
-import 'calendar_screen.dart';
-import 'profile_screen.dart';
+
 
 class Review extends StatefulWidget {
   const Review({super.key});
@@ -43,13 +41,6 @@ class _ReviewState extends State<Review> {
       comments.removeAt(index);
       _saveData();
     });
-  }
-
-  void _navigateToPage(Widget page) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => page),
-    );
   }
 
   @override
@@ -210,45 +201,6 @@ class _ReviewState extends State<Review> {
                   ),
                 ],
               ),
-            ),
-          ),
-          SizedBox(height: screenHeight * 0.02),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: screenHeight * 0.015),
-            decoration: BoxDecoration(
-              color: Colors.orange,
-              borderRadius: BorderRadius.circular(30),
-            ),
-            margin: EdgeInsets.only(bottom: screenHeight * 0.03, left: screenWidth * 0.05, right: screenWidth * 0.05),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                IconButton(
-                  icon: Icon(Icons.home, color: Colors.white, size: screenWidth * 0.08),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
-                  },
-                ),
-                IconButton(
-                  icon: Icon(Icons.calendar_today, color: Colors.white, size: screenWidth * 0.08),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => CalendarScreen()));
-                  },
-                ),
-                IconButton(
-                  icon: Icon(Icons.category, color: Colors.white, size: screenWidth * 0.08),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => CategoriesScreen()));
-                  },
-                ),
-                IconButton(
-                  icon: Icon(Icons.person, color: Colors.white, size: screenWidth * 0.08),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
-                  },
-                ),
-              ],
-
             ),
           ),
         ],
