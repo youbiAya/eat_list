@@ -4,11 +4,8 @@ import 'package:eat_list/ProfileScreen.dart';
 import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
 import 'category1.dart';
-import 'category2.dart';
 import 'category3.dart';
-//import 'home_screen.dart';
-//import 'calendar_screen.dart';
-//import 'profile_screen.dart';
+
 
 class SubCategoriesScreen extends StatelessWidget {
   final String category;

@@ -4,9 +4,6 @@ import 'package:eat_list/ProfileScreen.dart';
 import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
 import 'category2.dart';
-//import 'home_screen.dart';
-//import 'calendar_screen.dart';
-//import 'profile_screen.dart';
 
 class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});

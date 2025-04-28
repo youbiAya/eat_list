@@ -36,15 +36,15 @@ class _DishDetailsPageState extends State<DishDetailsPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Use MediaQuery to get screen dimensions
+
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    // Define some spacing and padding based on the screen size
-    double horizontalPadding = screenWidth * 0.05; // 5% of screen width
-    double verticalPadding = screenHeight * 0.02; // 2% of screen height
-    double imageHeight = screenHeight * 0.25; // Set image height to 25% of screen height
-    double fontSize = screenWidth * 0.05; // Adjust font size based on screen width
+
+    double horizontalPadding = screenWidth * 0.05;
+    double verticalPadding = screenHeight * 0.02;
+    double imageHeight = screenHeight * 0.25;
+    double fontSize = screenWidth * 0.05;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -110,7 +110,7 @@ class _DishDetailsPageState extends State<DishDetailsPage> {
                     SizedBox(height: 24),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.pushNamed(context, '/review'); // Use named route to navigate to Review
+                        Navigator.pushNamed(context, '/review');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: primaryColor,

@@ -4,8 +4,7 @@ import 'package:eat_list/ProfileScreen.dart';
 import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
 import 'category1.dart';
-import 'category2.dart';
-import 'category3.dart';
+
 
 
 class DetailedCategoriesScreen extends StatelessWidget {

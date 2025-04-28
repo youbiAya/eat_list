@@ -24,46 +24,41 @@ class CookingMenuPage extends StatefulWidget {
 
 class _CookingMenuPageState extends State<CookingMenuPage> {
   final Color primaryColor = Color(0xFFFFA630);
-  int _selectedIndex = 0; // Track selected index for BottomNavigationBar
+  int _selectedIndex = 0;
 
-  // Methods to navigate to other pages for each tab
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
 
-    // Implement navigation logic
     if (_selectedIndex == 0) {
-      // Home - no navigation needed as we're already on the home screen
     } else if (_selectedIndex == 1) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => CalendarPage()), // Navigate to Calendar page
+        MaterialPageRoute(builder: (context) => CalendarPage()),
       );
     } else if (_selectedIndex == 2) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => CategoriesScreen()), // Navigate to Categories page
+        MaterialPageRoute(builder: (context) => CategoriesScreen()),
       );
     } else if (_selectedIndex == 3) {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => Profilescreen()), // Navigate to Profile page
+        MaterialPageRoute(builder: (context) => Profilescreen()),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    // Use MediaQuery to get screen dimensions
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    // Define some spacing and padding based on the screen size
-    double horizontalPadding = screenWidth * 0.05; // 5% of screen width
-    double verticalPadding = screenHeight * 0.02; // 2% of screen height
-    double imageHeight = screenHeight * 0.25; // Set image height to 25% of screen height
-    double fontSize = screenWidth * 0.05; // Adjust font size based on screen width
+    double horizontalPadding = screenWidth * 0.05;
+    double verticalPadding = screenHeight * 0.02;
+    double imageHeight = screenHeight * 0.25;
+    double fontSize = screenWidth * 0.05;
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -86,7 +81,7 @@ class _CookingMenuPageState extends State<CookingMenuPage> {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Image.network(
-                      'https://images.unsplash.com/photo-1586190848861-99aa4a171e90', // Actual image URL
+                      'https://images.unsplash.com/photo-1586190848861-99aa4a171e90',
                       height: imageHeight,
                       width: double.infinity,
                       fit: BoxFit.cover,
@@ -141,7 +136,7 @@ class _CookingMenuPageState extends State<CookingMenuPage> {
                       crossAxisSpacing: 10,
                       mainAxisSpacing: 10,
                       children: [
-                        'https://images.unsplash.com/photo-1586190848861-99aa4a171e90', // Replace with actual images
+                        'https://images.unsplash.com/photo-1586190848861-99aa4a171e90',
                         'https://images.unsplash.com/photo-1573497491209-c473b1f2c0b1',
                         'https://images.unsplash.com/photo-1604032411083-16e62bba944d',
                         'https://images.unsplash.com/photo-1604184522780-2f513f6f38c1',

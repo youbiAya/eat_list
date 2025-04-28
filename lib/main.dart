@@ -1,9 +1,7 @@
 import 'package:eat_list/desc.dart';
-import 'package:eat_list/pageprinc.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:eat_list/Calendar.dart';
-import 'package:eat_list/category1.dart';
 import 'package:eat_list/review.dart';
 import 'opening1.dart';
 import 'opening2.dart';
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/', // Set initial route
+      initialRoute: '/',
       routes: {
         '/': (context) => DishDetailsPage(),
         '/review': (context) => Review(),

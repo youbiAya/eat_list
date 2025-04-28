@@ -22,13 +22,13 @@ class _CalendarPageState extends State<CalendarPage> {
 
   @override
   Widget build(BuildContext context) {
-    // Use MediaQuery to get screen dimensions
+
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    // Define some spacing and padding based on the screen size
-    double horizontalPadding = screenWidth * 0.05; // 5% of screen width
-    double verticalPadding = screenHeight * 0.02; // 2% of screen height
+
+    double horizontalPadding = screenWidth * 0.05;
+    double verticalPadding = screenHeight * 0.02;
 
     return Scaffold(
       appBar: AppBar(
@@ -56,9 +56,9 @@ class _CalendarPageState extends State<CalendarPage> {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: widget.primaryColor,
                     shape: StadiumBorder(),
-                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.03), // Adjust button width
+                    padding: EdgeInsets.symmetric(horizontal: screenWidth * 0.03),
                   ),
-                  child: Text(day, style: TextStyle(fontSize: screenWidth * 0.04)), // Adjust text size based on screen width
+                  child: Text(day, style: TextStyle(fontSize: screenWidth * 0.04)),
                 );
               }).toList(),
             ),
@@ -66,7 +66,7 @@ class _CalendarPageState extends State<CalendarPage> {
             if (selectedDay != null)
               Text(
                 'You selected: $selectedDay',
-                style: TextStyle(fontSize: screenWidth * 0.05, color: widget.primaryColor), // Adjust font size based on screen width
+                style: TextStyle(fontSize: screenWidth * 0.05, color: widget.primaryColor),
               ),
             SizedBox(height: verticalPadding),
             ElevatedButton.icon(
@@ -76,13 +76,13 @@ class _CalendarPageState extends State<CalendarPage> {
               style: ElevatedButton.styleFrom(
                 backgroundColor: widget.primaryColor,
                 shape: StadiumBorder(),
-                padding: EdgeInsets.symmetric(vertical: screenHeight * 0.02), // Adjust padding for the button
+                padding: EdgeInsets.symmetric(vertical: screenHeight * 0.02),
               ),
             ),
             SizedBox(height: verticalPadding),
             Text(
               "Archives",
-              style: TextStyle(fontWeight: FontWeight.bold, color: widget.primaryColor, fontSize: screenWidth * 0.045), // Adjust font size based on screen width
+              style: TextStyle(fontWeight: FontWeight.bold, color: widget.primaryColor, fontSize: screenWidth * 0.045),
             ),
           ],
         ),
