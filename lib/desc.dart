@@ -42,7 +42,6 @@ class _DishDetailsPageState extends State<DishDetailsPage> {
 
 
     double horizontalPadding = screenWidth * 0.05;
-    double verticalPadding = screenHeight * 0.02;
     double imageHeight = screenHeight * 0.25;
     double fontSize = screenWidth * 0.05;
 
